@@ -2,6 +2,11 @@ package com.es.eoi.shop.entities;
 
 public class Textile extends Article {
 
+	@Override
+	public String toString() {
+		return super.toString() + "Textile [color=" + color + ", size=" + size + "]";
+	}
+
 	private String color;
 	private String size;
 	private static final Double TEXTILE_VAT = 1.21;

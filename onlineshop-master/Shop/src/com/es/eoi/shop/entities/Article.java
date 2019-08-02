@@ -5,8 +5,10 @@ import com.es.eoi.shop.interfaces.Prizable;
 public abstract class Article implements Prizable {
 
 	private String name;
+	private String description;
 	private Double price=0.0;
 	private String vat;
+	private String provider;
 	private Integer stock;
 	private String category;
 	
@@ -57,12 +59,29 @@ public abstract class Article implements Prizable {
 		return this.getPrice()*DEFAULT_VAT;
 	}
 
-	@Override
-	public String toString() {
-		return "Article [name=" + name + ", price=" + price + ", stock=" + stock + ", category=" + category + "]";
+	public String getDescription() {
+		return description;
 	}
 
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
+	public String getProvider() {
+		return provider;
+	}
+
+	public void setProvider(String provider) {
+		this.provider = provider;
+	}
+
+	@Override
+	public String toString() {
+		return "Article [name=" + name + ", description=" + description + ", price=" + price + ", vat=" + vat
+				+ ", provider=" + provider + ", stock=" + stock + ", category=" + category + "]";
+	}
+
+	
 
 
 }
