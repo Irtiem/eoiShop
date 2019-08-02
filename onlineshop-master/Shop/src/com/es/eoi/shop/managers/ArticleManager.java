@@ -18,7 +18,7 @@ public class ArticleManager implements Manageable {
 
 		for (Article article : warehouse.getArticles()) {
 
-			if (article.equals(null)) {
+			if (article==null) {
 				article = newArticle;
 			}
 		}
